@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  frontend:
+    image: node:14
+    container_name: frontend
+    build: ./
+    volumes:
+      - './:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
+    stdin_open: true
+    command: npm start
+  
+  test:
+    image: node:14
+    volumes: 
+      - ./:/app
+      - /app/node_modules
+    command: npm test
