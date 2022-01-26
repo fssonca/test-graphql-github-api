@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import formatterNumber from '../utils/formatterNumber';
 
-const Starcount = ({stars}: { stars: number }) => {
+const Starcount = ({starCount}: { starCount: number }) => {
   return (
     <Fragment>
       <div className="icon">
@@ -22,8 +22,8 @@ const Starcount = ({stars}: { stars: number }) => {
         </svg>
       </div>
 
-      <span title={`${stars}`} data-testid="stars-count">
-        {formatterNumber(stars)}
+      <span title={`${starCount}`} data-testid="stars-count">
+        {formatterNumber(starCount)}
       </span>
     </Fragment>
   );

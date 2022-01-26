@@ -40,7 +40,7 @@ describe('testing layout components', () => {
 
   test('Starcount shows correct number', () => {
     // eslint-disable-next-line react/react-in-jsx-scope
-    render(<Starcount stars={12345} />);
+    render(<Starcount starCount={12345} />);
 
     const elem = screen.getByTestId('stars-count');
 

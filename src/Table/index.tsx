@@ -9,10 +9,10 @@ import Paper from '@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Tooltip from '@material-ui/core/Tooltip';
 import {getComparator, stableSort} from '../utils/sorterData';
-import SearchInput from './SearchInput';
+import SearchInput from '../components/searchInput';
 import useStyles from './useStyles';
 import {IData, IOrder, ITableGithub} from '../types';
-import TableHeader from './TableHeader';
+import TableHeader from '../components/tableHeader';
 import Starcount from '../components/starcount';
 import Forkcount from '../components/forkcount';
 import '../App.css';
@@ -129,7 +129,7 @@ const TableGithub = (props: ITableGithub) => {
                     </TableCell>
                     <TableCell align="right">
                       <div className="table-cell">
-                        <Starcount stars={node.stargazerCount} />
+                        <Starcount starCount={node.stargazerCount} />
                       </div>
                     </TableCell>
                     <TableCell align="right">
